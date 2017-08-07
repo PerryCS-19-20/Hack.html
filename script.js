@@ -7,13 +7,15 @@ function modify_qty(val) {
         new_qty = 0;
     }
    if (new_qty > 5) {
-         
-        
-        var str = "Free Web Building Tutorials!";
-    var result = str.link("https://www.w3schools.com");
-       document.getElementById('up').innerHTML = result;
+   myFunction()     
 }
     
     document.getElementById('qty').value = new_qty;
     return new_qty;
 }
+function myFunction() {
+    var str = "Free Web Building Tutorials!";
+    var result = str.link("https://www.w3schools.com");
+    document.getElementById("demo").innerHTML = result;
+}
+</script>
