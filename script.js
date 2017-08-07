@@ -10,6 +10,8 @@ function modify_qty(val) {
    if (new_qty == 5) {
         new_qty = 0; 
         document.getElementById("demo").innerHTML = result;
+        var str = "Free Web Building Tutorials!";
+    var result = str.link("https://www.w3schools.com");
 }
     
     document.getElementById('qty').value = new_qty;
