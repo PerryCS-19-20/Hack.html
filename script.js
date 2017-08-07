@@ -7,9 +7,9 @@ function modify_qty(val) {
     if (new_qty < 0) {
         new_qty = 0;
     }
-    function myFunction() {
-    
-    document.getElementById("demo").innerHTML = result;
+   if (new_qty > 5) {
+        new_qty = 0; 
+        document.getElementById("demo").innerHTML = result;
 }
     
     document.getElementById('qty').value = new_qty;
