@@ -33,10 +33,18 @@
       <input style="font-size:100%" type="submit" value="Submit">
     </form> <br>
 
-    <label for="qty">Quantity</label>
-    <input id="qty" value="1" />
-    <button>Bad SNAH</button>
-    <button>Praise SNAH</button>
+    <button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var str = "Free Web Building Tutorials!";
+    var result = str.link("https://www.w3schools.com");
+    document.getElementById("demo").innerHTML = result;
+}
+</script>
+
 
   </body>
 </html>
