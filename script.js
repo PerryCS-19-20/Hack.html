@@ -6,7 +6,7 @@ function modify_qty(val) {
     if (new_qty < 0) {
         new_qty = 0;
     }
-   if (qty > 5) {
+   if (now_qty > 5) {
    myFunction()     
 }
     
@@ -18,4 +18,3 @@ function myFunction() {
     var result = str.link("https://www.w3schools.com");
     document.getElementById("demo").innerHTML = result;
 }
-</script>
