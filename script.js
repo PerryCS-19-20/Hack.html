@@ -7,7 +7,7 @@ function modify_qty(val) {
     if (new_qty < 0) {
         new_qty = 0;
     }
-   if (new_qty > 5) {
+   if (new_qty == 5) {
         new_qty = 0; 
         document.getElementById("demo").innerHTML = result;
 }
