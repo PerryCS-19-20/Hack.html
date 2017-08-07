@@ -6,7 +6,7 @@ function modify_qty(val) {
     if (new_qty < 0) {
         new_qty = 0;
     }
-   if (now_qty > 5) {
+   if (new_qty > 5) {
    myFunction()     
 }
     
