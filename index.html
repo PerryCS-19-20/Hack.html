@@ -33,15 +33,20 @@
       <input style="font-size:100%" type="submit" value="Submit">
     </form> <br>
 
-    <button onclick="myFunction()">Try it</button>
+    <button onclick="myFunction()">Praise SNAH</button>
 
 <p id="demo"></p>
 
 <script>
 function myFunction() {
     var str = "Free Web Building Tutorials!";
-    var result = str.link("https://www.w3schools.com");
+    var result = str.link("https://www.youtube.com/user/bluedefil");
     document.getElementById("demo").innerHTML = result;
+var add = (function () {
+    var counter = 0;
+    return function () {return counter += 1;}
+})();
+    document.getElementById("demo").innerHTML = add();
 }
 </script>
 
