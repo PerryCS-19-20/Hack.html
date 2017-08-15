@@ -5,9 +5,9 @@ var deal = function() {
 };
 
 //function that returns dealers hand between 17-21
-var dealerhand = function(x, y) {
-    cardDealer = Math.floor(Math.random()*(21 - 17 + 1)+17);
-    return cardDealer;
+var dealerhand = function(17, 21) {
+    card = Math.floor(Math.random()*(21 - 17 + 1)+17);
+    return cardD; //should be return card;
 }
 
 //declaring variables
