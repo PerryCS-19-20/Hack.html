@@ -33,6 +33,171 @@
 							document.write('<iframe id="iframe-embed" width="100%" height="750px" src="//embed.streamdor.co/video/337780" frameborder="0" allowfullscreen></iframe>');
 						}
 					</script>
+			<div class="col-lg-11 col-md-12 central-content" id="central-content">
+      <div id="global-notifications" class="global-notifications"></div>
+      <div id="uiAppPushdown" ng-show="pushdown.data.active" class="pushdown slidedown ng-isolate-scope ng-hide" slidedown-duration="500" style="display:none;display:none"><div class="pushdown-header"><button id="uiAppPushdownBackBtn" type="button" class="back close ng-hide" ng-click="pushdown.historyBack($event)" ng-show="pushdown.data.isSecondLevelPushdown &amp;&amp; pushdown.allowBackButton()"><i class="icon-back"></i></button> <button id="uiAppPushdownCloseBtn" type="button" class="close" ng-click="pushdown.close()"><i class="icon-close"></i></button><h1 id="uiAppPushdownTitle" class="pushdown-title ng-binding"></h1></div><div class="pushdown-notification"></div><div class="pushdown-body"><input style="height: 0px;padding: 0;margin: 0;border: none;display: block;line-height: 0"><div id="uiAppPushdownPreContent"></div><div id="uiAppPushdownContent" class="pushdown__content"></div><!-- uiView: pushdown --><div id="uiAppPushDownView" ui-view="pushdown" class="ng-scope"></div></div></div>
+      <div id="page-wrapper" class="node-casino-game websites-onecol" ng-init="$root.layoutClass='websites-onecol'" ng-class="$root.layoutClass">
+      <div class="content-header">
+        <div class="content-header-item">
+          <!-- componentStart:93517fb35c0e7b076828a33812454e3c --><div class="websites-default-pane node_title"><!-- ngIf: $root.nodeType == 'help' --><h1 ng-show="$root.headline" ng-bind-html="$root.headline" ng-init="$root.headline='Classic Blackjack'" role="headline" class="ng-binding">Classic Blackjack</h1></div>
+<!-- componentEnd -->        </div>
+          <!-- uiView: content_header_right --><div class="spaNavigationView content-header-item ng-scope" ui-view="content_header_right">
+    <div id="spaNavigationComponents_content_header_right">
+      <!-- componentStart:7069f8214ecba31880280ee6f75cc9d4 --><div class="contextual-links-region content_header_right">
+
+  <div class="websites-default-pane casino_search_box"><div class="search-box_wrapper">
+  <ui-app-casino-search-box uia-search-url="https://casino.bovada.lv/search" class="ng-isolate-scope"><div class="search-box"><form class="search-box-form ng-pristine ng-valid ng-valid-latin-validation" ng-submit="searchBox.q &amp;&amp; searchBox.search(searchBox.q)"><div class="input-group"><input autocomplete="off" id="search-box-input" class="form-control pull-right ng-pristine ng-untouched ng-valid ng-valid-latin-validation" placeholder="Search by Casino Game" ng-model="searchBox.q" ui-app-search-box-validation="" ui-app-clear-input=""><span class="clear-btn icon-close clear-hidden"></span> <span class="input-group-btn"><button id="search-box-btn" class="btn" type="submit"><i class="icon-search"></i></button></span></div></form></div></ui-app-casino-search-box>
+</div>
+</div>
+
+</div><!-- componentEnd -->  <script>
+    try {
+        jQuery.extend(Drupal.settings.websites.translations.categories, {"casino_search_box":{"searchPlaceholder":"Search by Casino Game","latinValidationMessage":"Only latin characters are permitted."}});
+        }
+    catch (e) {}
+
+  </script>    </div>
+  </div>
+
+      </div>
+      <!-- componentStart:645b7cc6c7d83da0145e2eccc32b7ac4 --><div class="websites-default-pane udc_container">
+  <div ui-app-udc="" uia-id="udc_container-7329-41517">
+  
+</div></div>
+<!-- componentEnd --><!-- componentStart:77f8dacfd3a4a2f1a7f4295c96403453 --><div class="websites-default-pane page_content">  <div class="page-content">
+    <div class="content-wrapper clearfix">
+  
+    <!-- uiView: content_top --><div class="spaNavigationView ng-scope" ui-view="content_top">
+      <div id="spaNavigationComponents_content_top" class="content_top">
+      </div>
+    </div>
+
+    <div class="center-wrapper">
+
+      <!-- uiView: content_left --><div class="spaNavigationView ng-scope" ui-view="content_left">
+        <div id="spaNavigationComponents_content_left" class="content_left">
+        </div>
+      </div>
+
+      <!-- uiView: content_center --><div class="spaNavigationView ng-scope" ui-view="content_center">
+        <div id="spaNavigationComponents_content_center" class="content_center">
+          <!-- componentStart:3c51e556dc909bb5c2b17e1d9c7d450d --><div class="websites-default-pane casinowrapper_game_launcher">
+    <div id="uiAppGameLauncherWrapper" class="game-launcher-wrapper animate ng-isolate-scope" ng-show="gameLauncher.ready" data="{'gameId':1,'category':'Blackjack Games', 'showFullscreenButton': 1}" style=""><div class="game-launcher-panel"><header class="game-launcher-header"><button id="uiAppGameWrapperCloseBtn" type="button" class="close" ng-click="gameLauncher.close()"><i class="icon-close"></i></button> <button ng-show="gameLauncher.fullScreenButton &amp;&amp; !gameLauncher.fullScreen" id="goFullScreen" type="button" class="maximize" ng-click="gameLauncher.goFullScreen()"><i class="icon-maximize"></i></button> <button ng-show="gameLauncher.fullScreen" id="exitFullScreen" type="button" class="minimize ng-hide" ng-click="gameLauncher.exitFullScreen()"><i class="icon-minimize"></i></button> <!-- ngIf: gameLauncher.allowConcurrentSessions --> <!-- ngIf: gameLauncher.gameMode === 'practice' --><button id="uiAppGameWrapperToggleMode" class="btn btn-casino pull-right ng-binding ng-scope" ng-bind-html="gameLauncher.toggleButton" ng-if="gameLauncher.gameMode === 'practice'" ng-click="gameLauncher.toggleMode()" style="">Real Play</button><!-- end ngIf: gameLauncher.gameMode === 'practice' --><h3 id="uiAppGameWrapperTitle" class="game-launcher-title ng-binding" ng-bind-html="gameLauncher.heading">Practice Play</h3></header><div id="gameWrapper" class="game-launcher-body ng-binding" ng-class="{'hide-launcher-on-modal-opens' : gameLauncher.hideLauncherOnModalOpens}" ng-bind-html="gameLauncher.iframe"><iframe id="mainFrame" style="width:100%;height:100%;padding:0;border:none;margin:0;overflow=hidden;" scrolling="no" frameborder="0" seamless="seamless" marginheight="0" marginwidth="0" src="https://www.bovada.lv/static/brng-flash/rtgflash/mini_flash_client.html?token=&amp;forReal=FALSE&amp;IP=casinoapp.bovada.lv&amp;portBase=0&amp;casinoName=USD&amp;gameid=0&amp;machid=0&amp;user=&amp;playAgain=&amp;playForReal=&amp;embedded=false&amp;language=en&amp;siteId=10&amp;cdn=https%3A%2F%2Fcdn13-a.imagestore.lv%7Chttps%3A%2F%2Fcdn13-b.imagestore.lv%7Chttps%3A%2F%2Fcdn13-c.imagestore.lv"></iframe></div></div></div>
+
+
+
+
+</div>
+<!-- componentEnd --><!-- componentStart:213da174bfaa59dd0c039649cc56cb9c --><div class="websites-default-pane casino_page"><div class="casino-game container">
+    <div class="row">
+    <div class="pull-right">
+        <button class="btn btn-casino play-now" ui-app-game-launcher-play="" style="display: none;">PLAY NOW</button>
+    </div>
+  </div>
+              <div class="row">
+        <div class="casino-game-main-image">
+                    <img class="ui-app-lazy-img_loaded " src="https://cdn13-a.imagestore.lv/static/site10/862x350_blackjack_classic_gamedescription_lightblue.jpg" alt="Play Classic Blackjack Online at Bovada" title="Play Classic Blackjack Online at Bovada" width="" height="" typeof="">        </div>
+      </div>
+        <section class="row casino-game-content">
+    <h2 class="casino-game-desc-title">Game Description</h2>
+    <div class="casino-game-desc-wrapper">
+            <div class="screenshot-img"><img src="https://cdn13-a.imagestore.lv/static/site10/blackjack_bovada.jpg"></div>
+                    <div class="casino-game-desc"><div class="wysiwyg"><p>Learn how to play Blackjack and improve your skills, then watch as the cards turn over to see if you’ve won big. Blackjack or 21 is by far the most played casino table game and a popular online casino game. There’s action when playing any variety of Blackjack, and Bovada online casino has them all.</p>
+
+<p>Based on a score of 21, Blackjack provides the player with some of the best odds in the house. The objective of Blackjack is for a Player to come as close to 21 without going over, while still having a higher total than the Dealer. Prior to receiving any cards, the Player must place a bet. The cards are dealt in rotation from the Dealer, left-to-right. The Dealer's hand has one card face down and one card face up. If the Player's card total is closer to 21 than the Dealer's, the Player wins. The Player wins if the Dealer's card total is higher than 21. The Player also wins with Blackjack when the Dealer’s score is 21 made up of three or more cards. If the Player's total is over 21, the Player loses. Players have the option to play one or two hands against the Dealer. You have Blackjack when the first two cards equal 21.</p>
+
+<p>&nbsp;</p>
+
+<h2>How To Play Blackjack</h2>
+
+<p>&nbsp;</p>
+
+<p><strong>Rules</strong></p>
+
+<ul><li>The game is played using six decks, which are reshuffled after each hand.</li>
+	<li>Dealer hits on soft 17.</li>
+	<li>Player Blackjack pays 3 to 2.</li>
+	<li>Any other winning hand is paid 1 to 1.</li>
+	<li>Insurance pays 2 to 1.</li>
+	<li>Split up to three hands.</li>
+	<li>Surrender any first two cards.</li>
+	<li>Split aces receive only one card.</li>
+	<li>No re-splitting of aces.</li>
+	<li>A split ace and a ten-value card is not a Blackjack.<br>
+		&nbsp;</li>
+</ul><p><strong>Betting</strong></p>
+
+<ul><li>Click on a chip to place a bet.</li>
+	<li>Additional clicks on the chip interface will add to the wager.</li>
+	<li>To remove a bet, click on the chip in the betting circle.</li>
+	<li>Minimum amount to bet is $1 while the maximum is $500.<br>
+		&nbsp;</li>
+</ul><p><strong>Card Values</strong></p>
+
+<ul><li>Card suits are irrelevant.</li>
+	<li>Cards 2 to 10 have face value.</li>
+	<li>Jacks, queens, and kings are worth 10.</li>
+	<li>Aces have a value of 1 or 11.<br>
+		&nbsp;</li>
+</ul><p><strong>Win or Lose</strong></p>
+
+<ul><li>The Player wins when he holds a score that is 21 or less, but greater than the Dealer’s final total.</li>
+	<li>Achieving a score of 21 or less when the Dealer’s final score exceeds 21.</li>
+	<li>An ace and any ten-value card together on the initial deal is called a Blackjack.</li>
+	<li>Blackjack pays 3 to 2, providing that the Dealer does not also have Blackjack.</li>
+	<li>A Player and Dealer Blackjack on the same hand results in a tie, known as a push.</li>
+	<li>Any winning score of 21 after a split is paid 1 to 1.<br>
+		&nbsp;</li>
+</ul><p><strong>Button Descriptions</strong></p>
+
+<ul><li>Deal - Used to start the game after you have placed your bet.</li>
+	<li>Hit - Used when you want to be dealt another card. Players can hit as many times as they like unless the total of the cards equals or exceeds 21.</li>
+	<li>Stand - Used when you want to keep the hand dealt to you. This automatically happens if you hit 21 or double down.</li>
+	<li>Double - After being dealt the first two cards a Player can decide to double down. The bet on the hand is doubled and one additional card is dealt to the Player.</li>
+	<li>Split - Used to split the first two cards dealt into two separate hands when they match. You can have up to three hands at one time except when you split two aces. Then, only one additional card can be dealt for each hand. A hand total of 21 after splitting aces is considered 21, not Blackjack.</li>
+	<li>Surrender - If a Player decides to surrender, they get 50% of the bet and the other half goes to the house.</li>
+	<li>Rebet - When a hand is complete, you have the option to rebet the amount previously bet.</li>
+	<li>Insurance - If the Dealer is showing an ace, the Player is offered a supplemental bet called insurance. A wager of exactly half of the original bet is placed on the table. If the Dealer has Blackjack, the house pays the Insurance bet 2 to 1. If the Dealer does not have Blackjack, the Player loses the insurance bet, and the Player's initial bet is then settled by comparing his cards with the Dealer's. If the Dealer and the Player both have Blackjack, the game is pushed and the Player gets the amount won by taking insurance, called even money.<br>
+		&nbsp;</li>
+</ul><p><strong>Glossary</strong></p>
+
+<ul><li>Bust -&nbsp;When either the Dealer's or the Player's cards equal more than 21.</li>
+	<li>Push - When the total of both hands are the same and fall between 17 and 21, neither hand wins.</li>
+</ul><p>&nbsp;</p>
+
+<p>Want to learn more about Blackjack? Check out the <a href="/blackjack-games/blackjack-strategy-the-basics">basics</a> and <a href="/blackjack-games/blackjack-strategy-tips-and-tricks">tips and tricks</a> and start playing now.</p>
+</div>
+</div>
+          </div>
+  </section>
+    <div class="row">
+    <div class="pull-right">
+        <button class="btn btn-casino play-now" ui-app-game-launcher-play="" style="display: none;">PLAY NOW</button>
+    </div>
+  </div>
+    <ui-app-casino-sticky-button><div class="modal-sticky-container" ng-class="{'active': data.active}"><div class="modal-content container"><header class="modal-header"><div class="col-xs-13"><div class="header-content ng-binding ng-hide" ng-bind-html="data.content" ng-show="data.content"></div></div><div class="col-xs-3"><button type="button" class="close text-center" ng-click="close(); btnClose()"><i class="icon-close"></i></button></div></header><footer class="modal-footer"><div class="col-sm-8"><button ng-click="confirm(); btnConfirm()" ng-bind="data.confirmText" class="btn btn-default btn-block ng-binding"></button></div></footer></div></div></ui-app-casino-sticky-button>
+</div>
+</div>
+<!-- componentEnd -->        </div>
+      </div>
+
+      <!-- uiView: content_right --><div class="spaNavigationView ng-scope" ui-view="content_right">
+        <div id="spaNavigationComponents_content_right" class="content_right">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- uiView: content_bottom --><div class="spaNavigationView ng-scope" ui-view="content_bottom">
+      <div id="spaNavigationComponents_content_bottom" class="content_bottom">
+      </div>
+    </div>
+
+  
+</div>  </div>
+</div>
+<!-- componentEnd -->    </div>
+    </div>
 				
 		
 		
