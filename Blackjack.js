@@ -1,55 +1,118 @@
-//function that returns a random card
-var deal = function() {
-  card = Math.floor(Math.random()*52+1);
-  return card;
+/*Object Oriented Blackjack
+
+A Game has: Players
+Dealer
+Deck
+
+A Player / Dealer has: Score
+Cards
+
+A Score has: Game Logic
+Current Score
+
+
+A Deck has: Cards
+*/
+function Game() {
+    this.currentTurnIndex = 0;
+    this.deck = new Deck();
+}
+
+function Deck() {
+    this.cards = [];
+    this.cardsDrawn = 0;
+    var suits = ["spades", "diamonds", "hearts", "clubs"];
+    var names = ["ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king"];
+    for (var suit in suits) {
+        for (var name in names) {
+            this.cards.push(new Card(names[name], suits[suit]));
+        }
+    }
+}
+
+Deck.prototype.getCard = function () {
+    if (this.cards.length == this.cardsDrawn) {
+        return null;
+    } //case: check if all cards drawn
+
+    var random = Math.floor(Math.random() * (this.cards.length - this.cardsDrawn));
+    var temp = this.cards[random];
+
+    //swap chosen card with card last in array
+    this.cards[random] = this.cards[this.cards.length - this.cardsDrawn - 1];
+    this.cards[this.cards.length - this.cardsDrawn - 1] = temp;
+    this.cardsDrawn++;
+
+    return temp;
 };
 
-//function that returns dealers hand between 17-21
-var dealerhand = function(17, 21) {
-    card = Math.floor(Math.random()*(21 - 17 + 1)+17);
-    return cardD; //should be return card;
+function Card(name, suit) {
+    this.name = name;
+    this.suit = suit;
 }
 
-//declaring variables
-var card1 = deal();
-var card2 = deal();
-var dealer = dealerhand();
-var x = 17;
-var y = 21;
+Card.prototype.image = function () {
+    return "http://www.jonarnaldo.com/sandbox/deck_images/" + name + "_of_" + suit + ".png";
+};
 
-//retrieving the value of the cards from the deal function
-var getValue = function(card) {
+Card.prototype.value = function () {
+    if (this.name == "jack" || "queen" || "king") {
+        return [10];
+    } else if (this.name == "ace") {
+        return [1, 11];
+    } else {
+        return parseInt(this.name, 10);
+    }
+};
 
-    if(card % 13 === 0 || card % 13 === 11 || card % 13 === 12){
-        return 10;   
-    }
-    if(card % 13 === 1){
-        return 11;   
-    }
-    else{
-        return card % 13;
-    }
+function Player() {
+    //this.name;
+    this.cards = [];
 }
 
+Player.prototype.addCard = function () {
+    this.cards.push(deck.getCard());
+};
 
-//scoring the cards dealt and determining the outcome
-//using the if and else if statements    
-function score() {
+Player.prototype.score = function () {
+    var score = 0;
+    var aces = [];
+    
+    for (var i = 0; i < this.cards.length; i++) {
+        var value = this.cards[i].value() // value array ex.[10]
+        if (value.length == 1) {
+            score += value[0];
+        } else {
+            aces.push(value);
+        }
+    }
+    
+    for (var j = 0; j < aces.length; j++) {
+        if (score + aces[j].value[1] <= 21) {
+            score + aces[j].value[1];
+        } else {
+            score + aces[j].value[0];
+        }
+    }
+    return score;
+    
+};
 
-    if ((getValue(card1) + getValue(card2)) > 22){
-        return "Busted!";
-    }
-    else if (getValue(cardDealer) > getValue(card1) + getValue(card2)){
-        return "You lose!";
-    }
-    else if (getValue(cardDealer) === getValue(card1) + getValue(card2)){
-        return "Draw!";
-    }
-    else{
-        return getValue(card1) + getValue(card2);
-    }
-}
+var deck = new Deck();
+var player1 = new Player();
 
-//Need to display results onto HTML page        
-//alert("You have card " + card1 + " / " + card2 +
-//        " Score: " + score(card1, card2);
+
+$("#getCard").click(function () {
+    player1.addCard();
+    
+    
+    
+    
+    var cardName = player1.cards[player1.cards.length-1].name;
+    var cardSuit = player1.cards[player1.cards.length-1].suit;
+    $("#table").append(cardName + cardSuit);
+    
+    
+    
+    
+});
