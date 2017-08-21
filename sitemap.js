@@ -10,6 +10,12 @@ function buildMap(x) {
     a1.textContent = "Home";
     a1.href = "index.html";
     list1.appendChild(a1);
+    var list2 = document.createElement("li");
+    createList.appendChild(list1);
+    var a2 = document.createElement("a")
+    a2.textContent = "Eclipse";
+    a2.href = "solar.html";
+    list2.appendChild(a1);
 
     var list3 = document.createElement("li");
     createList.appendChild(list3);
