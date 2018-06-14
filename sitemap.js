@@ -14,7 +14,7 @@ function buildMap(x) {
     createList.appendChild(list1);
     var a2 = document.createElement("a")
     a2.textContent = "Blog Bois";
-    a2.href = "solar.html";
+    a2.href = "blog.html";
     list2.appendChild(a1);
 
     var list3 = document.createElement("li");
